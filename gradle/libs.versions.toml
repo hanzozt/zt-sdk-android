@@ -31,7 +31,7 @@ lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx",
 lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
-ziti = { group = "org.openziti", name = "ziti", version.ref = "ziti" }
+ziti = { group = "org.hanzozt", name = "ziti", version.ref = "ziti" }
 
 jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "jupiter" }
 jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "jupiter" }

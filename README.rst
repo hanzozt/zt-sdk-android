@@ -1,17 +1,17 @@
-.. image:: https://raw.githubusercontent.com/openziti/branding/main/images/banners/Android.jpg
+.. image:: https://raw.githubusercontent.com/hanzozt/branding/main/images/banners/Android.jpg
     :alt: Ziggy using the ziti-sdk-android
 
-.. image:: https://github.com/openziti/ziti-sdk-android/workflows/CI%20build/badge.svg
-    :target: https://github.com/openziti/ziti-sdk-android/actions?query=workflow%3A%22CI+build%22
+.. image:: https://github.com/hanzozt/ziti-sdk-android/workflows/CI%20build/badge.svg
+    :target: https://github.com/hanzozt/ziti-sdk-android/actions?query=workflow%3A%22CI+build%22
 
-.. image:: http://maven-badges.herokuapp.com/maven-central/org.openziti/ziti-android/badge.svg
-    :target: http://maven-badges.herokuapp.com/maven-central/org.openziti/ziti-android
+.. image:: http://maven-badges.herokuapp.com/maven-central/org.hanzozt/ziti-android/badge.svg
+    :target: http://maven-badges.herokuapp.com/maven-central/org.hanzozt/ziti-android
 
 Ziti SDK for JVM
 =================
 The **Ziti SDK for Android** enables developers to easily and securely connect their
 Android applications
-to backend services over `OpenZiti <https://github.com/openziti/ziti>`_ networks.
+to backend services over `Hanzo ZT <https://github.com/hanzozt/ziti>`_ networks.
 
 .. contents::
 
@@ -48,7 +48,7 @@ _____
      <dependencies>
         ...
         <dependency>
-           <groupId>org.openziti</groupId>
+           <groupId>org.hanzozt</groupId>
            <artifactId>ziti-android</artifactId>
            <version>[0,)</version>
         </dependency>
@@ -67,7 +67,7 @@ ______
    ...
    dependencies {
       ...
-      implementation 'org.openziti:ziti-android:+' // todo use fixed version
+      implementation 'org.hanzozt:ziti-android:+' // todo use fixed version
    }
 
 Building from Source
@@ -93,7 +93,7 @@ Features
 
 Enrollment
 __________
-See background `here <https://openziti.github.io/ziti/identities/enrolling.html>`_
+See background `here <https://hanzozt.github.io/ziti/identities/enrolling.html>`_
 
 Java SDK provides a way to enroll and generate *identity file*.
 The default identity format for Java SDK is Java KeyStore stored as ``.p12/.pfx`` files,
@@ -106,8 +106,8 @@ private key entry
    ``ziti://<controller_addr>/<id>`` alias (pkcs#12 - friendly name)
 
 rootCA
-   root CA certificates used to validate `Ziti controller <https://openziti.github.io/ziti/manage/controller.html>`_ and
-   `routers <https://openziti.github.io/ziti/manage/router-overview.html>`_
+   root CA certificates used to validate `Ziti controller <https://hanzozt.github.io/ziti/manage/controller.html>`_ and
+   `routers <https://hanzozt.github.io/ziti/manage/router-overview.html>`_
 
 Note:
 
@@ -117,7 +117,7 @@ Note:
 Android Support
 ---------------
 Easiest way to start developing on Android with Ziti is to create your repo from
-our `template project <https://github.com/openziti/ziti-android-app#readme>`_
+our `template project <https://github.com/hanzozt/ziti-android-app#readme>`_
 or just look at the code for inspiration.
 
 
@@ -134,6 +134,6 @@ to address them.
 
 
 .. _Developer Community: https://ziti.dev
-.. _docs: https://openziti.github.io/ziti/overview.html
-.. _Discourse: https://openziti.discourse.group/
-.. _issues: https://github.com/openziti/ziti-sdk-android/issues
+.. _docs: https://hanzozt.github.io/ziti/overview.html
+.. _Discourse: https://hanzozt.discourse.group/
+.. _issues: https://github.com/hanzozt/ziti-sdk-android/issues

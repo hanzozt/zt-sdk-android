@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import android.annotation.SuppressLint
 import android.app.*
@@ -34,12 +34,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
-import org.openziti.ZitiContext
-import org.openziti.net.dns.DNSResolver
-import org.openziti.util.DebugInfoProvider
-import org.openziti.util.Logged
-import org.openziti.util.Version
-import org.openziti.util.ZitiLog
+import org.hanzozt.ZitiContext
+import org.hanzozt.net.dns.DNSResolver
+import org.hanzozt.util.DebugInfoProvider
+import org.hanzozt.util.Logged
+import org.hanzozt.util.Version
+import org.hanzozt.util.ZitiLog
 import java.io.PrintWriter
 import java.net.URI
 import java.security.KeyStore
@@ -63,7 +63,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.IO + supervisor
 
-    internal val Impl = org.openziti.Ziti
+    internal val Impl = org.hanzozt.Ziti
     internal var enrollmentClass: Class<out Activity> = EnrollmentActivity::class.java
 
     const val Ziti = "Ziti"
@@ -108,7 +108,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
 
         val appId = app.packageName
         val appVer = getAppVersion()
-        org.openziti.Ziti.setApplicationInfo(appId, appVer)
+        org.hanzozt.Ziti.setApplicationInfo(appId, appVer)
 
         keyStore = KeyStore.getInstance("AndroidKeyStore")
         keyStore.load(null)
@@ -207,7 +207,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
 
     fun sendFeedbackIntent() = Intent(Intent.ACTION_SEND).apply {
         type = "application/zip"
-        putExtra(Intent.EXTRA_EMAIL, arrayOf("developers@openziti.org"))
+        putExtra(Intent.EXTRA_EMAIL, arrayOf("developers@hanzozt.org"))
         putExtra(Intent.EXTRA_SUBJECT, app.getString(R.string.supportEmailSubject))
 
         val identities = Impl.getContexts()

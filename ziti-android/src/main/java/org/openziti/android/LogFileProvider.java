@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.android;
+package org.hanzozt.android;
 
 
 import androidx.core.content.FileProvider;

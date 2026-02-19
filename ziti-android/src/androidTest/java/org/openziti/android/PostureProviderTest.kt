@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.openziti.api.PostureQuery
-import org.openziti.api.PostureQueryType
-import org.openziti.api.PostureResponse
-import org.openziti.posture.PostureService
+import org.hanzozt.api.PostureQuery
+import org.hanzozt.api.PostureQueryType
+import org.hanzozt.api.PostureResponse
+import org.hanzozt.posture.PostureService
 
 @RunWith(AndroidJUnit4::class)
 class PostureProviderTest {

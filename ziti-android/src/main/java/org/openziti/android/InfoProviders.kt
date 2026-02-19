@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import android.os.Build
-import org.openziti.util.DebugInfoProvider
-import org.openziti.util.Version
+import org.hanzozt.util.DebugInfoProvider
+import org.hanzozt.util.Version
 import java.io.Writer
 import java.security.KeyStore
 import java.security.cert.X509Certificate

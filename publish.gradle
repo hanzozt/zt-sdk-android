@@ -31,7 +31,7 @@ project.plugins.withType(MavenPublishPlugin).all {
 
         pub.pom {
             name = project.getName()
-            url = "https://openziti.org"
+            url = "https://hanzozt.org"
             description = project.getProperty('description')
 
             licenses {
@@ -45,15 +45,15 @@ project.plugins.withType(MavenPublishPlugin).all {
             developers {
                 developer {
                     id = "devs"
-                    name = "OpenZiti Development Team"
-                    email = "developers@openziti.org"
+                    name = "Hanzo ZT Development Team"
+                    email = "developers@hanzozt.org"
                 }
             }
 
             scm {
-                connection = "scm:git:https://github.com/openziti/ziti-jvm-android"
-                developerConnection = "scm:git:ssh://github.com/openziti/ziti-jvm-android.git"
-                url = "https://github.com/openziti/ziti-sdk-android"
+                connection = "scm:git:https://github.com/hanzozt/ziti-jvm-android"
+                developerConnection = "scm:git:ssh://github.com/hanzozt/ziti-jvm-android.git"
+                url = "https://github.com/hanzozt/ziti-sdk-android"
             }
         }
     }

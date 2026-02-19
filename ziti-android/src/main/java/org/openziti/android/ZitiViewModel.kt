@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import android.app.Application
 import androidx.lifecycle.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import org.openziti.Ziti.IdentityEventType
-import org.openziti.ZitiContext
+import org.hanzozt.Ziti.IdentityEventType
+import org.hanzozt.ZitiContext
 import java.util.concurrent.ConcurrentHashMap
 
 /**

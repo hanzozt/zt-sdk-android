@@ -30,4 +30,4 @@
 # limitations under the License.
 #
 
-org.openziti.android.AndroidSystemInfoProvider
+org.hanzozt.android.AndroidSystemInfoProvider

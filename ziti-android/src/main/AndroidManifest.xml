@@ -22,7 +22,7 @@
         <activity android:name=".EnrollmentActivity" />
 
         <provider
-            android:name="org.openziti.android.LogFileProvider"
+            android:name="org.hanzozt.android.LogFileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">

@@ -44,7 +44,7 @@ ext {
     gitBranch = semver.info.branch.name
 }
 
-group = "org.openziti"
+group = "org.hanzozt"
 version = "${semver.info}"
 
 subprojects {

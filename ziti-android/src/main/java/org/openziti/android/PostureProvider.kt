@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import android.os.Build
-import org.openziti.api.PostureQuery
-import org.openziti.api.PostureQueryType
-import org.openziti.api.PostureResponse
-import org.openziti.posture.PostureService
-import org.openziti.posture.PostureServiceProvider
+import org.hanzozt.api.PostureQuery
+import org.hanzozt.api.PostureQueryType
+import org.hanzozt.api.PostureResponse
+import org.hanzozt.posture.PostureService
+import org.hanzozt.posture.PostureServiceProvider
 import java.net.NetworkInterface
 
 class PostureProvider: PostureServiceProvider {

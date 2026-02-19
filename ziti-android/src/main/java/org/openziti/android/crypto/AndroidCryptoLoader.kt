@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.android.crypto
+package org.hanzozt.android.crypto
 
 import com.goterl.lazysodium.LazySodium
 import com.goterl.lazysodium.LazySodiumAndroid
 import com.goterl.lazysodium.SodiumAndroid
-import org.openziti.crypto.CryptoLoader
+import org.hanzozt.crypto.CryptoLoader
 
 class AndroidCryptoLoader: CryptoLoader {
     override fun load(): LazySodium {

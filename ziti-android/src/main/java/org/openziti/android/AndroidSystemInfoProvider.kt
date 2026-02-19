@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import android.os.Build
-import org.openziti.util.SystemInfo
-import org.openziti.util.SystemInfoProvider
+import org.hanzozt.util.SystemInfo
+import org.hanzozt.util.SystemInfoProvider
 
 class AndroidSystemInfoProvider: SystemInfoProvider {
     override fun getSystemInfo(): SystemInfo = SystemInfo("Android",

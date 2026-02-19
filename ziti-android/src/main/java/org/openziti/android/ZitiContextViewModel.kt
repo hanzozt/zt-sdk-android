@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti.android
+package org.hanzozt.android
 
 import androidx.lifecycle.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import org.openziti.ZitiContext
-import org.openziti.api.Service
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.ZitiContext
+import org.hanzozt.api.Service
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 
 /**
  * Class to allow application to consume ZitiContext data exposed as LiveData
