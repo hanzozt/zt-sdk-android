@@ -15,6 +15,6 @@
   -->
 
 <resources>
-    <string name="jna_library_appname">ziti</string>
+    <string name="jna_library_appname">zt</string>
     <string name="supportEmailSubject">Ziti Support (Android)</string>
 </resources>

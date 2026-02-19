@@ -76,7 +76,7 @@ android {
 }
 
 dependencies {
-    api(libs.ziti) {
+    api(libs.zt) {
         exclude module:"lazysodium-java"
         exclude module:"jna"
     }
@@ -103,7 +103,7 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            zitiAndroid(MavenPublication) {
+            ztAndroid(MavenPublication) {
                 groupId = project.group
                 version = project.version
                 from components.release

@@ -72,7 +72,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
     lateinit var app: Application
     private val identityEvent = MutableLiveData<IdentityEvent>()
 
-    lateinit var zitiPref: SharedPreferences
+    lateinit var ztPref: SharedPreferences
     lateinit var keyStore: KeyStore
     var currentActivity: Activity? = null
 
@@ -113,16 +113,16 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
         keyStore = KeyStore.getInstance("AndroidKeyStore")
         keyStore.load(null)
 
-        zitiPref = app.getSharedPreferences("ziti", Context.MODE_PRIVATE)
+        ztPref = app.getSharedPreferences("zt", Context.MODE_PRIVATE)
         val ctxList = Impl.init(keyStore, seamless)
 
         for (c in ctxList) {
-            val enabled = zitiPref.getBoolean("${c.name()}.enabled", true)
+            val enabled = ztPref.getBoolean("${c.name()}.enabled", true)
             c.setEnabled(enabled)
             launch {
                 c.statusUpdates().collect {
                     val on = it != ZitiContext.Status.Disabled
-                    zitiPref.edit()
+                    ztPref.edit()
                         .putBoolean("${c.name()}.enabled", on)
                         .apply()
                 }
@@ -156,7 +156,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
         identityEvent.postValue(IdentityRemoved(ctx.name()))
 
         val ctrl = URI.create(ctx.controller())
-        val idAlias = "ziti://${ctrl.host}:${ctrl.port}/${ctx.name()}"
+        val idAlias = "zt://${ctrl.host}:${ctrl.port}/${ctx.name()}"
         for(a in keyStore.aliases()) {
 
             if (keyStore.isKeyEntry(a)) {
@@ -165,7 +165,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
                     keyStore.deleteEntry(a)
                 }
             } else if (keyStore.isCertificateEntry(a)) {
-                if (a.startsWith("ziti:${ctx.name()}")) {
+                if (a.startsWith("zt:${ctx.name()}")) {
                     i("removing certificate entry $a")
                     keyStore.deleteEntry(a)
                 }
@@ -180,7 +180,7 @@ object Ziti: CoroutineScope, Logged by ZitiLog() {
     }
 
     fun enrollZiti(jwt: ByteArray) {
-        val name = "ziti-sdk"
+        val name = "zt-sdk"
 
         Thread {
             try {

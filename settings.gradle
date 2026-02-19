@@ -29,5 +29,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'ziti-android'
-include 'ziti-android'
+rootProject.name = 'zt-android'
+include 'zt-android'
